@@ -10,7 +10,7 @@ TORUN="/usr/server/TerrariaServer -x64 -config /config/serverconfig.txt -banlist
 
 if [ ! -f /config/serverconfig.txt ];
 then
-    cp defaultconfig.txt /config/serverconfig.txt
+    cp /usr/server/defaultconfig.txt /config/serverconfig.txt
     echo "Created new default config file"
 fi
 
