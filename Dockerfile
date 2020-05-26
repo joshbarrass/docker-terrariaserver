@@ -20,7 +20,7 @@ RUN mkdir -p server \
 WORKDIR /usr/server
 COPY run-server.sh run-server.sh
 COPY MIT MIT
-RUN wget https://github.com/joshbarrass/TerrariaServerWrapper/releases/download/v1.0.1/TerrariaServerWrapper-x64 -O TerrariaServerWrapper
+RUN wget https://github.com/joshbarrass/TerrariaServerWrapper/releases/download/v1.0.2/TerrariaServerWrapper-x64 -O TerrariaServerWrapper
 RUN chmod +x TerrariaServer* run-server.sh
 
 VOLUME /config
