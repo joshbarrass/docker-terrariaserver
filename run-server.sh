@@ -4,9 +4,9 @@
 # subject to the MIT License, found in file "MIT" and is Copyright (c)
 # Brandon Skrtich
 
-cd /
+cd /usr/server
 
-TORUN="/usr/server/TerrariaServerWrapper -config /config/serverconfig.txt -banlist /config/banlist.txt"
+TORUN="./TerrariaServerWrapper -config /config/serverconfig.txt -banlist /config/banlist.txt"
 
 if [ ! -f /config/serverconfig.txt ];
 then
@@ -32,6 +32,3 @@ fi
 
 echo "$TORUN $@"
 exec $TORUN $@
-    
-    
-
