@@ -6,7 +6,7 @@
 
 cd /usr/server
 
-TORUN="./TerrariaServerWrapper -config /config/serverconfig.txt -banlist /config/banlist.txt"
+TORUN="/usr/server/TerrariaServerWrapper -config /config/serverconfig.txt -banlist /config/banlist.txt"
 
 if [ ! -f /config/serverconfig.txt ];
 then
@@ -28,6 +28,11 @@ then
         exit
     fi
     TORUN="$TORUN -world /worlds/$world"
+fi
+
+if [ ! -z "$SERVER_EXECUTABLE" ];
+then
+    export SERVER_EXECUTABLE="/usr/server/TerrariaServer.bin.x86_64"
 fi
 
 echo "$TORUN $@"
